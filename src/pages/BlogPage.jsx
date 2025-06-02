@@ -1,10 +1,11 @@
 import React from 'react';
+import MenuBar from '../components/MenuBar';
 
 const BlogPage = () => {
     return (
-        <div>
+        <MenuBar>
             This is blog page  
-        </div>
+        </MenuBar>
     );
 };
 
