@@ -1,0 +1,4 @@
+1. Pages setup
+2. Routes setup in App.jsx with React router dom
+npm i react-router-dom
+npm i axios
