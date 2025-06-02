@@ -3,8 +3,10 @@ import React from 'react';
 const MenuBar = (props) => {
     return (
         <div>
-            This is MenuBar
-            {props.children}
+<h1 class="text-3xl font-bold underline">
+    Hello world!
+  </h1>         
+     {props.children}
         </div>
     );
 };
