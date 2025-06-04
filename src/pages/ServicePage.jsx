@@ -1,10 +1,11 @@
 import React from 'react';
+import NavBar from '../components/NavBar';
 
 const ServicePage = () => {
     return (
-        <div>
+        <NavBar>
             This is service page
-        </div>
+        </NavBar>
     );
 };
 

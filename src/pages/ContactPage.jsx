@@ -1,11 +1,11 @@
 import React from 'react';
-import MenuBar from '../components/MenuBar';
+import NavBar from '../components/NavBar';
 
 const ContactPage = () => {
     return (
-        <MenuBar>
+        <NavBar>
             This is contact page
-        </MenuBar>
+        </NavBar>
     );
 };
 

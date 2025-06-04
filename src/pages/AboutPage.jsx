@@ -1,11 +1,11 @@
 import React from 'react';
-import MenuBar from '../components/MenuBar';
+import NavBar from '../components/NavBar';
 
 const AboutPage = () => {
     return (
-        <MenuBar>
+        <NavBar>
             This is about page 
-        </MenuBar>
+        </NavBar>
     );
 };
 
