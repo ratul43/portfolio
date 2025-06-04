@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { menuList } from '../../APIRequest/apiRequest';
 import { Link, NavLink } from 'react-router-dom';
+import { menuList } from '../../APIRequest/APIRequest';
 
 const NavBar = (props) => {
 

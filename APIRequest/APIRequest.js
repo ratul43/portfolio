@@ -7,6 +7,11 @@ export async function menuList() {
 return res.data
 }
 
+export async function PostList() {
+    let res = await axios.get(BaseURL + "/postlist")
+return res.data
+}
+
 
 
 

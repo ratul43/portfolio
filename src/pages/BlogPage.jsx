@@ -1,11 +1,14 @@
 import React from 'react';
-import MenuBar from '../components/NavBar';
+import NavBar from '../components/NavBar';
+import BlogCard from '../components/BlogCard';
 
 const BlogPage = () => {
     return (
-        <MenuBar>
-            This is blog page  
-        </MenuBar>
+        <NavBar>
+            <BlogCard>
+                
+            </BlogCard>
+        </NavBar>
     );
 };
 

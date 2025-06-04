@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Slider = () => {
+const Slider = (props) => {
     return (
         <div>
             <div>
@@ -13,13 +13,13 @@ const Slider = () => {
         <h1 className="mb-2 text-3xl font-bold text-white">
            Software Engineer
         </h1>
-        <p className="mb-6 text-white">
+        <h2 className="mb-6 font-bold text-white">
           Self-motivated and adaptable developer with applicable database 
           knowledge and coding skills. Organized programmer
            looking for an opportunity to grow as
             a developer and support an ambitious startup
              technology company. Collaborative communicator with relationship building skills.
-        </p>
+        </h2>
         <div className="flex justify-center space-x-5">
          
           <button className="flex w-full items-center justify-center gap-2 rounded-2xl bg-white p-5 py-3 font-semibold">
@@ -38,7 +38,7 @@ const Slider = () => {
     </div>
   </div>
 </div>
-
+      {props.children}
 
             </div>
     );

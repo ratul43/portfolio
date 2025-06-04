@@ -1,11 +1,12 @@
 import React from 'react';
 import TestComp from '../components/TestComp';
+import BlogCard from '../components/BlogCard';
 
 const TestPage = () => {
     return (
-        <TestComp>
+        <BlogCard>
             This is test page
-        </TestComp>
+        </BlogCard>
     );
 };
 
