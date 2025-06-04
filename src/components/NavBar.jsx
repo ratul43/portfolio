@@ -1,6 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { menuList } from '../../APIRequest/apiRequest';
 
 const NavBar = (props) => {
+
+  let [list, setList] = useState(null)
+  
+      useEffect(()=>{
+  
+          (async()=>{
+              let res = await menuList()
+              console.log(res);
+              
+              setList(res)
+          })()
+      },
+  [])
+
+
+
+
     return (
         <div>
             <div>
@@ -13,7 +31,14 @@ const NavBar = (props) => {
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Item 1</a></li>
+        
+
+          
+             <li><a>Item 1</a></li>
+                 
+        
+        
+        
         
       </ul>
     </div>

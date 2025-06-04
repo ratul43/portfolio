@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import NavBar from '../components/NavBar';
+import { menuList } from '../../APIRequest/apiRequest';
 
-const HomePage = () => {
+const HomePage = () => { 
+
+
     return (
         <NavBar>
             
