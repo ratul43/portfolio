@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { menuList } from '../../APIRequest/apiRequest';
+import { Link, NavLink } from 'react-router-dom';
 
 const NavBar = (props) => {
 
@@ -33,7 +34,7 @@ const NavBar = (props) => {
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
         
       {list.map((item)=>{
-        return  <li key={item.id}><a>{item.name}</a></li>
+        return  <li key={item.id}><NavLink to= {"/"+ item['name']} >{item.name}</NavLink></li>
       })}
       
       </ul>
@@ -43,7 +44,7 @@ const NavBar = (props) => {
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
       {list.map((item)=>{
-        return  <li key={item.id}><a>{item.name}</a></li>
+        return  <li key={item.id}><NavLink to= {"/"+ item['name']} >{item.name}</NavLink></li>
       })}
       
     </ul>
