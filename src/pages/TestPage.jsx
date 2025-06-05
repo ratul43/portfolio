@@ -1,12 +1,12 @@
 import React from 'react';
-import Footer from '../components/Footer';
+import About from '../components/About';
 
 
 const TestPage = () => {
     return (
-        <Footer>
+        <About>
             This is test page
-        </Footer>
+        </About>
     );
 };
 
