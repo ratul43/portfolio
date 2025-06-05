@@ -1,16 +1,23 @@
 import React, { useEffect, useState } from "react";
+import {useLocation} from "react-router-dom"
 import "../css/BlogCard.css";
 import { PostList } from "../../APIRequest/APIRequest";
 
 const BlogCard = () => {
   const [list, setList] = useState([]);
+  const location = useLocation()
 
   useEffect(() => {
     (async () => {
       const res = await PostList();
-      setList(res); // প্রথম ১০টি পোস্ট
+      if(location.pathname === "/" || "/Home"){
+        setList(res.slice(0, 6))
+      }
+      else if (location.pathname === "/Blog"){
+        setList(res)
+      }
     })();
-  }, []);
+  }, [location.pathname]);
 
   return (
     <div className="blog-wrapper">
