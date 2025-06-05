@@ -1,12 +1,12 @@
 import React from 'react';
-import TestComp from '../components/TestComp';
-import BlogCard from '../components/BlogCard';
+import Footer from '../components/Footer';
+
 
 const TestPage = () => {
     return (
-        <BlogCard>
+        <Footer>
             This is test page
-        </BlogCard>
+        </Footer>
     );
 };
 

@@ -3,7 +3,7 @@ import {useLocation} from "react-router-dom"
 import "../css/BlogCard.css";
 import { PostList } from "../../APIRequest/APIRequest";
 
-const BlogCard = () => {
+const BlogCard = (props) => {
   const [list, setList] = useState([]);
   const location = useLocation()
 
@@ -38,6 +38,7 @@ const BlogCard = () => {
           </div>
         </div>
       ))}
+      {props.children}
     </div>
   );
 };
