@@ -17,7 +17,10 @@ export async function Employees() {
     return res.data
 }
 
-
+export async function Service(){
+    let res = await axios.get(BaseURL + "/service")
+    return res.data
+}
 
 
 

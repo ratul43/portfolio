@@ -1,13 +1,13 @@
 import React from 'react';
 
-import TeamSection from '../components/TeamSection';
+import ServiceSection from './../components/ServiceSection';
 
 
 const TestPage = () => {
     return (
-        <TeamSection>
+        <ServiceSection>
             This is test page
-        </TeamSection>
+        </ServiceSection>
     );
 };
 

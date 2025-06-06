@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Employees } from '../../APIRequest/APIRequest';
 
-const TeamSection = () => {
+const TeamSection = (props) => {
   let [list, setList] = useState([]);
 
   useEffect(() => {
@@ -12,7 +12,9 @@ const TeamSection = () => {
   }, []);
 
   return (
-    <section className="bg-base-100 py-12">
+    <div>
+
+      <section className="bg-base-100 py-12">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center text-primary mb-10">Our Team</h2>
 
@@ -36,6 +38,9 @@ const TeamSection = () => {
         </div>
       </div>
     </section>
+          {props.children}
+    </div>
+    
   );
 };
 
