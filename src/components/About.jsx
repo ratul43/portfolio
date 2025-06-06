@@ -12,7 +12,7 @@ const stats = [
   { name: 'Hours per week', value: '40' },
   { name: 'Paid time off', value: 'Unlimited' },
 ]
-const About = () => {
+const About = (props) => {
     return (
         <div>
             <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
@@ -65,6 +65,7 @@ const About = () => {
         </div>
       </div>
     </div>
+    {props.children}
         </div>
     );
 };

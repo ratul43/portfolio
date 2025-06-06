@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { menuList } from '../../APIRequest/apiRequest';
+import { Employees } from '../../APIRequest/APIRequest';
 
 function TestComp(props) {
   const [data, setData] = useState(null);
@@ -10,7 +10,7 @@ function TestComp(props) {
     (async () => {
       try {
         setLoading(true);
-        const result = await menuList();
+        const result = await Employees();
         setData(result);
         setError(null);
       } catch (err) {

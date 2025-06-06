@@ -12,7 +12,10 @@ export async function PostList() {
 return res.data
 }
 
-
+export async function Employees() {
+    let res = await axios.get(BaseURL + "/employee")
+    return res.data
+}
 
 
 

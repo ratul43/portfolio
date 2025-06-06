@@ -1,12 +1,13 @@
 import React from 'react';
-import About from '../components/About';
+
+import TeamSection from '../components/TeamSection';
 
 
 const TestPage = () => {
     return (
-        <About>
+        <TeamSection>
             This is test page
-        </About>
+        </TeamSection>
     );
 };
 
