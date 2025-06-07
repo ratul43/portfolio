@@ -1,11 +1,15 @@
 import React from 'react';
-import NavBar from '../components/NavBar';
+import ContactForm from '../components/ContactForm';
+import NavBar from './../components/NavBar';
 
 const ContactPage = () => {
     return (
-        <NavBar>
+    <NavBar>
+        <ContactForm>
             This is contact page
-        </NavBar>
+        </ContactForm>
+    </NavBar>        
+        
     );
 };
 
