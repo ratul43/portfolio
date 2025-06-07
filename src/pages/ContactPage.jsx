@@ -1,12 +1,16 @@
 import React from 'react';
 import ContactForm from '../components/ContactForm';
 import NavBar from './../components/NavBar';
+import Footer from '../components/Footer';
 
 const ContactPage = () => {
     return (
     <NavBar>
         <ContactForm>
-            This is contact page
+            <Footer>
+
+            </Footer>
+            
         </ContactForm>
     </NavBar>        
         

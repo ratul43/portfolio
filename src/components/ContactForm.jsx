@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ContactForm = () => {
+const ContactForm = (props) => {
     return (
         <div className='px-8 py-8'>
             <div className="px-8 py-8 mx-auto max-w-xl  bg-white">
@@ -55,7 +55,7 @@ const ContactForm = () => {
     </button>
   </form>
 </div>
-
+{props.children}
         </div>
     );
 };
