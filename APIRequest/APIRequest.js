@@ -77,26 +77,49 @@ export const DeleteEmployee = async (id) => {
 
 
 
+// Read All Services
+export const Service = async () => {
+    try {
+        let res = await axios.get(`${BaseURL}/service`);
+        return res.data;
+    } catch (err) {
+        console.error(err);
+        return [];
+    }
+};
 
+// Create Service
+export const CreateService = async (postBody) => {
+    try {
+        let res = await axios.post(`${BaseURL}/service`, postBody);
+        return res.data;
+    } catch (err) {
+        console.error(err);
+        return null;
+    }
+};
 
+// Update Service
+export const UpdateService = async (id, postBody) => {
+    try {
+        let res = await axios.put(`${BaseURL}/service/${id}`, postBody);
+        return res.data;
+    } catch (err) {
+        console.error(err);
+        return null;
+    }
+};
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-export async function Service(){
-    let res = await axios.get(BaseURL + "/service")
-    return res.data
-}
+// Delete Service
+export const DeleteService = async (id) => {
+    try {
+        let res = await axios.delete(`${BaseURL}/service/${id}`);
+        return res.data;
+    } catch (err) {
+        console.error(err);
+        return null;
+    }
+};
 
 
 
