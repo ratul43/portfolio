@@ -9,6 +9,7 @@ import TestPage from './pages/TestPage';
 import AdminPanel from './components/DashBoard/AdminPanel';
 import AdminBlog from './components/DashBoard/BlogAdmin';
 import BlogAdmin from './components/DashBoard/BlogAdmin';
+import TeamAdmin from './components/DashBoard/TeamAdmin';
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
     {/* Admin Panel Routes  */}
     <Route path="/admin" element= {<AdminPanel/>}>
 <Route path="blog" element={<BlogAdmin/>} />
+<Route path="team" element={<TeamAdmin/>} />
 
 
     </Route>

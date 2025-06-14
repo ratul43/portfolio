@@ -28,6 +28,52 @@ export const DeletePost = async (id) => {
 };
 
 
+//====================== TEAM EMPLOYEE CRUD ======================
+
+// Read All Employees
+export const Employees = async () => {
+    try {
+        let res = await axios.get(`${BaseURL}/employee`);
+        return res.data;
+    } catch (err) {
+        console.error(err);
+        return [];
+    }
+};
+
+// Create Employee
+export const CreateEmployee = async (postBody) => {
+    try {
+        let res = await axios.post(`${BaseURL}/employee`, postBody);
+        return res.data;
+    } catch (err) {
+        console.error(err);
+        return null;
+    }
+};
+
+
+// Update Employee
+export const UpdateEmployee = async (id, postBody) => {
+    try {
+        let res = await axios.put(`${BaseURL}/employee/${id}`, postBody);
+        return res.data;
+    } catch (err) {
+        console.error(err);
+        return null;
+    }
+};
+
+// Delete Employee
+export const DeleteEmployee = async (id) => {
+    try {
+        let res = await axios.delete(`${BaseURL}/employee/${id}`);
+        return res.data;
+    } catch (err) {
+        console.error(err);
+        return null;
+    }
+};
 
 
 
@@ -40,10 +86,12 @@ export const DeletePost = async (id) => {
 
 
 
-export async function Employees() {
-    let res = await axios.get(BaseURL + "/employee")
-    return res.data
-}
+
+
+
+
+
+
 
 export async function Service(){
     let res = await axios.get(BaseURL + "/service")
