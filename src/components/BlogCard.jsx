@@ -10,7 +10,8 @@ const BlogCard = (props) => {
   useEffect(() => {
     (async () => {
       const res = await PostList();
-      if(location.pathname === "/" || "/Home"){
+      // eslint-disable-next-line no-constant-condition
+      if(location.pathname === "/" || location.pathname === "/Home"){
         setList(res.slice(0, 6))
       }
       else if (location.pathname === "/Blog"){
