@@ -1,13 +1,12 @@
 import React from 'react';
-
-import ServiceSection from './../components/ServiceSection';
+import AdminPanel from '../components/DashBoard/AdminPanel';
 
 
 const TestPage = () => {
     return (
-        <ServiceSection>
+        <AdminPanel>
             This is test page
-        </ServiceSection>
+        </AdminPanel>
     );
 };
 

@@ -6,11 +6,15 @@ import AboutPage from './pages/AboutPage';
 import ServicePage from './pages/ServicePage';
 import ContactPage from './pages/ContactPage';
 import TestPage from './pages/TestPage';
+import AdminPanel from './components/DashBoard/AdminPanel';
+import AdminBlog from './components/DashBoard/BlogAdmin';
+import BlogAdmin from './components/DashBoard/BlogAdmin';
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
+        {/* Public Routes */}
         <Route path='/' element={<HomePage/>}/>
         <Route path='/Home' element={<HomePage/>}/>
         <Route path='/Blog' element={<BlogPage/>}/>
@@ -18,6 +22,13 @@ const App = () => {
         <Route path='/Service' element={<ServicePage/>}/>
         <Route path='/Contact' element={<ContactPage/>}/>
         <Route path='/test' element={<TestPage/>}/>
+
+    {/* Admin Panel Routes  */}
+    <Route path="/admin" element= {<AdminPanel/>}>
+<Route path="blog" element={<BlogAdmin/>} />
+
+
+    </Route>
       </Routes>
     </BrowserRouter>
   );
