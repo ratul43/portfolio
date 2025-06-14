@@ -11,6 +11,7 @@ import AdminBlog from './components/DashBoard/BlogAdmin';
 import BlogAdmin from './components/DashBoard/BlogAdmin';
 import TeamAdmin from './components/DashBoard/TeamAdmin';
 import ServiceAdmin from './components/DashBoard/ServiceAdmin';
+import AdminDashboard from './components/DashBoard/AdminDashBoard';
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
 
     {/* Admin Panel Routes  */}
     <Route path="/admin" element= {<AdminPanel/>}>
+    <Route index element={<AdminDashboard />} />
 <Route path="blog" element={<BlogAdmin/>} />
 <Route path="team" element={<TeamAdmin/>} />
 <Route path="service" element={<ServiceAdmin/>} />

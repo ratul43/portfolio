@@ -123,6 +123,49 @@ export const DeleteService = async (id) => {
 
 
 
+export const BlogCount = async () => {
+    try {
+        let res = await axios.get(`${BaseURL}/postlist`);
+        return res.data.length;
+    } catch (err) {
+        console.error(err);
+        return 0;
+    }
+};
+
+
+export const TeamCount = async () => {
+    try {
+        let res = await axios.get(`${BaseURL}/employee`);
+        return res.data.length;
+    } catch (err) {
+        console.error(err);
+        return 0;
+    }
+};
+
+
+export const ServiceCount = async () => {
+    try {
+        let res = await axios.get(`${BaseURL}/service`);
+        return res.data.length;
+    } catch (err) {
+        console.error(err);
+        return 0;
+    }
+};
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
