@@ -14,7 +14,7 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post('http://localhost:5000/api/register', formData);
+            const res = await axios.post('https://vercel-backend-orcin.vercel.app/api/register', formData);
             setMessage(res.data.message);
             setFormData({ email: '', password: '' });
 
