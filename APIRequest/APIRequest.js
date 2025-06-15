@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const BaseURL = "https://vercel-backend-l0q47q17x-ratul43s-projects.vercel.app/api"
+const BaseURL = "https://vercel-backend-orcin.vercel.app/api"
 
 export async function menuList() {
     let res = await axios.get(BaseURL + "/menulist")
