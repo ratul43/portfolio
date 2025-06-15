@@ -7,11 +7,12 @@ import ServicePage from './pages/ServicePage';
 import ContactPage from './pages/ContactPage';
 import TestPage from './pages/TestPage';
 import AdminPanel from './components/DashBoard/AdminPanel';
-import AdminBlog from './components/DashBoard/BlogAdmin';
 import BlogAdmin from './components/DashBoard/BlogAdmin';
 import TeamAdmin from './components/DashBoard/TeamAdmin';
 import ServiceAdmin from './components/DashBoard/ServiceAdmin';
 import AdminDashboard from './components/DashBoard/AdminDashBoard';
+import Register from './components/User/Register';
+import Login from './components/User/Login';
 
 const App = () => {
   return (
@@ -25,6 +26,18 @@ const App = () => {
         <Route path='/Service' element={<ServicePage/>}/>
         <Route path='/Contact' element={<ContactPage/>}/>
         <Route path='/test' element={<TestPage/>}/>
+
+
+    {/* User Routes */}
+
+  <Route path="/register" element={<Register />} />
+
+  <Route path="/login" element={<Login />} />
+
+
+
+
+
 
     {/* Admin Panel Routes  */}
     <Route path="/admin" element= {<AdminPanel/>}>
