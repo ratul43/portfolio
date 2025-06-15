@@ -15,11 +15,12 @@ const Login = () => {
         e.preventDefault();
         try {
             const res = await axios.post('http://localhost:5000/api/login', formData);
+       localStorage.setItem('token', res.data.token);
+  
             setMessage(res.data.message);
             setFormData({ email: '', password: '' });
 
             // এখানে টোকেন থাকলে সেটা লোকাল স্টোরেজে রাখতে পারো (ভবিষ্যতে এটা ব্যবহার হবে)
-            // localStorage.setItem('token', res.data.token);
             
             setTimeout(() => {
                 navigate('/admin'); // লগইন সফল হলে ড্যাশবোর্ডে যাবে

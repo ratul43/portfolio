@@ -13,6 +13,7 @@ import ServiceAdmin from './components/DashBoard/ServiceAdmin';
 import AdminDashboard from './components/DashBoard/AdminDashBoard';
 import Register from './components/User/Register';
 import Login from './components/User/Login';
+import PrivateRoute from './components/PrivateRoute';
 
 const App = () => {
   return (
@@ -29,25 +30,20 @@ const App = () => {
 
 
     {/* User Routes */}
-
-  <Route path="/register" element={<Register />} />
-
-  <Route path="/login" element={<Login />} />
-
-
-
-
-
-
-    {/* Admin Panel Routes  */}
-    <Route path="/admin" element= {<AdminPanel/>}>
-    <Route index element={<AdminDashboard />} />
-<Route path="blog" element={<BlogAdmin/>} />
-<Route path="team" element={<TeamAdmin/>} />
-<Route path="service" element={<ServiceAdmin/>} />
-
-
-    </Route>
+<Route path="/register" element={<Register/>}/>
+<Route path='/login' element={<Login/>} />
+  {/* Admin Panel Routes */}
+  
+        <Route path="/admin" element={
+          <PrivateRoute>
+            <AdminPanel />
+          </PrivateRoute>
+        }>
+          <Route index element={<AdminDashboard />} />
+          <Route path="blog" element={<BlogAdmin/>} />
+          <Route path="team" element={<TeamAdmin/>} />
+          <Route path="service" element={<ServiceAdmin/>} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
